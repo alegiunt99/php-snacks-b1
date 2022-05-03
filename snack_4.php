@@ -11,12 +11,14 @@ non tempor mi sodales. Ut eget lorem quis ligula hendrerit ornare. Aliquam at la
 bibendum at porttitor lobortis, posuere id libero. Nam vitae lacinia enim. Vestibulum fermentum metus felis,ù
 sit amet euismod justo sollicitudin convallis. Donec semper neque maximus, bibendum dolor et, condimentum sapien.
 Proin libero eros, convallis eu enim sit amet, rutrum blandit massa. Curabitur condimentum at ante id ornare. In purus elit,
-commodo vel vulputate quis, hendrerit quis arcu. Nullam a elit massa. Donec ac aliquet odio, quis vehicula lorem.
+commodo vel vulputate quis, hendrerit quis arcu. Nullam a elit massa. Donec ac aliquet odio, quis vehicula lorem
 ';
 
 $newParagraph = explode('.', $paragraph);
 
 ?>
+
+<h1>Paragrafo principale</h1>
 
 <p>
     <?php
@@ -24,9 +26,31 @@ $newParagraph = explode('.', $paragraph);
     ?>
 </p>
 
-
-<pre>
+<h2> Paragrafo suddiviso</h2>
+<div>
     <?php
-       var_dump($newParagraph);
+       for($i = 0; $i < count($newParagraph); $i++){
+
+            $keys = array_keys($newParagraph);
+
+            $numberParagraph = $keys[$i];
+
+            echo '<p>';
+
+            echo($numberParagraph . ')' . $newParagraph[$numberParagraph]);
+
+            echo '<p>';
+
+            /*for($keyIndex = 0; $keyIndex < count($keys); $keyIndex++){
+
+                echo '<p>';
+
+                echo($numberParagraph . ') ' . $numberParagraph[$keyIndex]);
+
+                echo '<p>';
+
+
+            }/*/
+       }
     ?>
-</pre>
+</div>
