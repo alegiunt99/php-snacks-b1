@@ -101,3 +101,23 @@ Olimpia Milano - Cantù | 55-60
  ]
 
  ?>
+
+ <h1>RISULTATI DI GIORNATA</h1>
+
+ <div>
+     <?php
+
+        
+        for($i = 0; $i < count($calendarMatch); $i++){
+
+            $match = $calendarMatch[$i];
+            
+            $matchResult = $match["home_team"] . ' - ' . $match["away_team"] . ' | ' . $match["home_score"] . ' - ' . $match["away_score"];
+
+            echo('<p>');
+            echo($matchResult);
+            echo('</p>');
+
+        }
+     ?>
+ </div>
