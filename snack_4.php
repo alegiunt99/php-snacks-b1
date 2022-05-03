@@ -37,20 +37,10 @@ $newParagraph = explode('.', $paragraph);
 
             echo '<p>';
 
-            echo($numberParagraph . ')' . $newParagraph[$numberParagraph]);
+            echo(($numberParagraph + 1) . ')' . $newParagraph[$numberParagraph]);
 
             echo '<p>';
 
-            /*for($keyIndex = 0; $keyIndex < count($keys); $keyIndex++){
-
-                echo '<p>';
-
-                echo($numberParagraph . ') ' . $numberParagraph[$keyIndex]);
-
-                echo '<p>';
-
-
-            }/*/
        }
     ?>
 </div>
